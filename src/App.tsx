@@ -167,7 +167,9 @@ function Hero() {
         </div>
 
         <a
-          href="#register"
+          href="https://imjo.in/mCDt52"
+          target="_blank"
+          rel="noopener noreferrer"
           className="mt-16 rounded-full border border-white/70 px-10 py-4 text-sm font-semibold tracking-wide text-white transition-colors hover:bg-white hover:text-[#060b14]"
         >
           Register Now
