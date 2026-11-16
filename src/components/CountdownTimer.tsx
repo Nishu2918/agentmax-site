@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const TARGET_DATE = new Date("2026-11-18T23:59:59").getTime();
+const TARGET_DATE = new Date("2026-11-19T23:59:59+05:30").getTime();
 
 function getTimeLeft() {
   const diff = Math.max(0, TARGET_DATE - Date.now());
