@@ -136,7 +136,7 @@ function Hero() {
       <VideoBackground src="/videos/bg-2.mp4" />
       <div className="relative z-10 flex flex-col items-center">
         <Logo size="hero" />
-        <h1 className="mt-2 text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-[#aaffff] to-[#00ffff] drop-shadow-[0_0_25px_rgba(0,255,255,0.35)] sm:text-7xl md:text-8xl">
+        <h1 className="mt-2 pb-3 text-6xl font-extrabold leading-[1.2] tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-[#aaffff] to-[#00ffff] drop-shadow-[0_0_25px_rgba(0,255,255,0.35)] sm:text-7xl md:text-8xl">
           AgentMaX
         </h1>
 
