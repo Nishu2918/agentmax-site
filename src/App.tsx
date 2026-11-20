@@ -1,5 +1,5 @@
 import { VideoBackground } from "./components/VideoBackground";
-import { CountdownTimer } from "./components/CountdownTimer";
+import { CountdownTimer, useRegistrationClosed } from "./components/CountdownTimer";
 
 const NAV_LINKS = [
   { label: "Home", href: "#home" },
@@ -131,6 +131,7 @@ function Navbar() {
 }
 
 function Hero() {
+  const closed = useRegistrationClosed();
   return (
     <section id="home" className="relative flex flex-col items-center justify-center px-6 pt-32 pb-24 text-center">
       <VideoBackground src="/videos/bg-2.mp4" />
@@ -166,14 +167,23 @@ function Hero() {
           ))}
         </div>
 
-        <a
-          href="https://imjo.in/mCDt52"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-16 rounded-full border border-white/70 px-10 py-4 text-sm font-semibold tracking-wide text-white transition-colors hover:bg-white hover:text-[#060b14]"
-        >
-          Register Now
-        </a>
+        {closed ? (
+          <span
+            aria-disabled="true"
+            className="mt-16 cursor-not-allowed rounded-full border border-white/30 px-10 py-4 text-sm font-semibold tracking-wide text-white/50"
+          >
+            Registration Closed
+          </span>
+        ) : (
+          <a
+            href="https://imjo.in/mCDt52"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-16 rounded-full border border-white/70 px-10 py-4 text-sm font-semibold tracking-wide text-white transition-colors hover:bg-white hover:text-[#060b14]"
+          >
+            Register Now
+          </a>
+        )}
       </div>
     </section>
   );

@@ -16,6 +16,17 @@ function pad(n: number) {
   return n.toString().padStart(2, "0");
 }
 
+export function useRegistrationClosed() {
+  const [closed, setClosed] = useState(Date.now() >= TARGET_DATE);
+
+  useEffect(() => {
+    const id = setInterval(() => setClosed(Date.now() >= TARGET_DATE), 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  return closed;
+}
+
 export function CountdownTimer() {
   const [time, setTime] = useState(getTimeLeft());
 
